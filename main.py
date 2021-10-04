@@ -29,13 +29,13 @@ df = pd.DataFrame(
     {
                 
 "Game":[1,2,3,4,5],
-"Home_Away":["Home","Home","Away","Home","Away"],
+"H_A":["Home","Home","Away","Home","Away"],
 "Result":["L (21-38)","W (24-6)","L (23-30)","W (35-6)","L (7-56)"],
-"Pass_Cmp":[30,9,19,12,25],
-"Pass_Att":[43,16,39,20,40],
-"Cmp_Pct":[69.8,56.3,48.7,60,62.5],
-"Pass_Yds":[283,66,260,88,256],
-"Pass_TD":[3,1,2,0,1],
+"PassCmp":[30,9,19,12,25],
+
+"CmpPct":[69.8,56.3,48.7,60,62.5],
+"PassYds":[283,66,260,88,256],
+"PassTD":[3,1,2,0,1],
  "Opponent":["Michigan State","Indiana State","Duke","Ohio","Nebraska"]
 
     }
@@ -45,7 +45,7 @@ df = pd.DataFrame(
 df.to_sql("NWfbData", conn, if_exists="replace", index=False) 
 
 # Query database and load result into dataframe
-df = pd.read_sql_query("select * from NWfbData where Pass_TD = 1", conn) 
+df = pd.read_sql_query("select * from NWfbData where PassTD = 1", conn) 
 
 # Print query result in terminal
 print (df)
