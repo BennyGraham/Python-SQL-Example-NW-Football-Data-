@@ -42,10 +42,10 @@ df = pd.DataFrame(
 )
 
 # Add table to database
-df.to_sql("ticks", conn, if_exists="replace") 
+df.to_sql("NWfbData", conn, if_exists="replace") 
 
 # Query database and load result into dataframe
-df = pd.read_sql_query("select * from ticks where TD = 1", conn) 
+df = pd.read_sql_query("select * from NWfbData where TD = 1", conn) 
 
 # Print query result in terminal
 print (df)
