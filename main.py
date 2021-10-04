@@ -32,11 +32,11 @@ df = pd.DataFrame(
 "Home_Away":["Home","Home","Away","Home","Away"],
 "Opponent":["Michigan State","Indiana State","Duke","Ohio","Nebraska"],
 "Result":["L (21-38)","W (24-6)","L (23-30)","W (35-6)","L (7-56)"],
-"Cmp":[30,9,19,12,25],
-"Att":[43,16,39,20,40],
+"Pass_Cmp":[30,9,19,12,25],
+"Pass_Att":[43,16,39,20,40],
 "Cmp_Pct":[69.8,56.3,48.7,60,62.5],
-"Yds":[283,66,260,88,256],
-"TD":[3,1,2,0,1]
+"Pass_Yds":[283,66,260,88,256],
+"Pass_TD":[3,1,2,0,1]
 
     }
 )
