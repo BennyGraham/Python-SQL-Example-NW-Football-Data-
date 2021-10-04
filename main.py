@@ -45,7 +45,7 @@ df = pd.DataFrame(
 df.to_sql("NWfbData", conn, if_exists="replace") 
 
 # Query database and load result into dataframe
-df = pd.read_sql_query("select * from NWfbData where TD = 1", conn) 
+df = pd.read_sql_query("select * from NWfbData where Pass_TD = 1", conn) 
 
 # Print query result in terminal
 print (df)
