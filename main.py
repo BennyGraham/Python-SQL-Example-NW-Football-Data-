@@ -2,7 +2,7 @@
 # Online Python - IDE, Editor, Compiler, Interpreter
 # Navigate to https://www.online-python.com/ to copy, paste, and run code
 
-# Program which stores raw data, creates a sql databse, and querys a result in browser memory or phyiscal ram
+# Program which stores raw data, creates a sql databse, and queries a result in browser memory or phyiscal ram
 
 
 # Sql module native to Python Env
@@ -42,10 +42,15 @@ df = pd.DataFrame(
 )
 
 # Add table to database
+
 df.to_sql("NWfbData", conn, if_exists="replace", index=False) 
 
 # Query database and load result into dataframe
+
 df = pd.read_sql_query("select * from NWfbData where PassTD = 1", conn) 
 
 # Print query result in terminal
+
 print (df)
+
+# :)
